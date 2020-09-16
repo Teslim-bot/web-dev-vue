@@ -1,0 +1,4 @@
+{
+  "baseUrl": "https://4x37yl78nj.execute-api.us-east-1.amazonaws.com/dev",
+  "baseUrlCors": "https://cors-anywhere.herokuapp.com/https://4x37yl78nj.execute-api.us-east-1.amazonaws.com/dev"
+}
