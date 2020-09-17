@@ -1,13 +1,15 @@
 <template>
-  <FetchExpenseTable />
+  <div>
+    <FetchTodoListTable />
+  </div>
 </template>
 
 <script>
-import FetchExpenseTable from "@/components/Tables/expense/FetchExpenseTable";
+import FetchTodoListTable from "../components/Tables/todo/FetchTodoListTable";
 
 export default {
-  name: "Dashboard",
-  components: { FetchExpenseTable }
+  name: "CreateTodoList",
+  components: { FetchTodoListTable }
 };
 </script>
 

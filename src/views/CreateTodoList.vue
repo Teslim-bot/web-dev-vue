@@ -1,13 +1,16 @@
 <template>
-$END$
+  <div>
+    <FetchTodoListTable />
+  </div>
 </template>
 
 <script>
+import FetchTodoListTable from "../components/Tables/todo/FetchTodoListTable";
+
 export default {
-name: "CreateTodoList"
-}
+  name: "CreateTodoList",
+  components: { FetchTodoListTable }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

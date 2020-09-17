@@ -11,6 +11,12 @@ class AppUtils {
     expense: {
       CREATE_EXPENSE: "/createExpense",
       FETCH_EXPENSE: "/getExpense"
+    },
+    todo: {
+      FETCH_TODO_LIST: "/todolist",
+      CREATE_TODO_LIST: "/createTodo",
+      DELETE_TODO: "/deleteTodo",
+      UPDATE_TODO_LIST: "/updateTodo"
     }
   };
 

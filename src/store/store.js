@@ -10,11 +10,13 @@ import * as form from "./modules/baseModules/form.js";
 import * as auth from "./modules/auth.js";
 import * as user from "./modules/user.js";
 import * as expense from "./modules/expense.js";
+import * as todo from "./modules/todo.js";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
+    todo,
     expense,
     user,
     auth,

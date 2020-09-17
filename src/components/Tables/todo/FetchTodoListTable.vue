@@ -119,10 +119,10 @@
 
 <script>
 import { mapState } from "vuex";
-import StoreUtils from "../../utils/BaseUtils/StoreUtils";
+import StoreUtils from "../../../utils/BaseUtils/StoreUtils";
 
 export default {
-  name: "Todolist",
+  name: "FetchTodoListTable",
   data() {
     return {
       editModalOpen: false,
@@ -140,26 +140,21 @@ export default {
         { key: "index", label: "S/N", sortable: true, class: "text-center" },
 
         // A column that needs custom formatting
-        { key: "company_name", label: "Company Name", sortable: true },
-        { key: "company_size", label: "Company Size", sortable: true },
-        { key: "contact_name", label: "Contact Name", sortable: true },
-        { key: "work_email", label: "Contact Email", sortable: true },
-        { key: "phone_number", label: "Contact Phone", sortable: true },
+        { key: "date", label: " Date", sortable: true },
+        { key: "category", label: " Category", sortable: true },
+        { key: "url", label: "Url ", sortable: true },
+        { key: "subcategory", label: "Subcategory ", sortable: true },
+        {
+          key: "task_description",
+          label: "Your task description",
+          sortable: true
+        },
+        { key: "notes", label: "Notes", sortable: true },
         { key: "action", label: "Actions", sortable: true }
       ]
     };
   },
 
-{
-  "id": "5",
-    "date": "14/07",
-    "category": "music",
-    "url": "https://www.wikipedia.org",
-    "file_chosen": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
-    "subcategory": "use a mop",
-    "task_description": "to clean the house",
-    "notes": "clean properly"
-},
   computed: {
     ...mapState({
       items: state => state.table.tableData,
@@ -199,7 +194,7 @@ export default {
       }
     },
     fetchTableData() {
-      StoreUtils.dispatch("company/fetchCompanies");
+      StoreUtils.dispatch("todo/fetchTodoList");
     },
     onFiltered(filteredItems) {
       // Trigger pagination to update the number of buttons/pages due to filtering
